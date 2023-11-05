@@ -75,4 +75,4 @@ https://www.linkedin.com/groups/12042170/
 **Material ref utilizado:** 
 https://docs.djangoproject.com/en/4.2/topics/http/urls/
 https://docs.djangoproject.com/en/3.2/ref/models/fields/#field-types
-
+https://www.pythonanywhere.com/
