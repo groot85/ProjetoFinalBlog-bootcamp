@@ -2,16 +2,17 @@
 #
 # Translators:
 # Aitzol Naberan <anaberan@codesyntax.com>, 2011-2013
+# Eneko Illarramendi <eneko@illarra.com>, 2017
 # Jannis Leidel <jannis@leidel.info>, 2011
+# Urtzi Odriozola <urtzi.odriozola@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: django\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-17 11:07+0100\n"
-"PO-Revision-Date: 2015-01-18 08:34+0000\n"
-"Last-Translator: Jannis Leidel <jannis@leidel.info>\n"
-"Language-Team: Basque (http://www.transifex.com/projects/p/django/language/"
-"eu/)\n"
+"POT-Creation-Date: 2017-01-19 16:49+0100\n"
+"PO-Revision-Date: 2017-09-25 09:47+0000\n"
+"Last-Translator: Urtzi Odriozola <urtzi.odriozola@gmail.com>\n"
+"Language-Team: Basque (http://www.transifex.com/django/django/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Administrative Documentation"
-msgstr ""
+msgstr "Kudeaketa dokumentazioa"
 
 msgid "Home"
 msgstr "Hasiera"
@@ -34,22 +35,13 @@ msgid "Documentation bookmarklets"
 msgstr "Dokumentazio markadoreak"
 
 msgid ""
-"\n"
-"<p class=\"help\">To install bookmarklets, drag the link to your bookmarks\n"
-"toolbar, or right-click the link and add it to your bookmarks. Now you can\n"
-"select the bookmarklet from any page in the site.  Note that some of these\n"
-"bookmarklets require you to be viewing the site from a computer designated\n"
-"as \"internal\" (talk to your system administrator if you aren't sure if\n"
-"your computer is \"internal\").</p>\n"
+"To install bookmarklets, drag the link to your bookmarks toolbar, or right-"
+"click the link and add it to your bookmarks. Now you can select the "
+"bookmarklet from any page in the site."
 msgstr ""
-"\n"
-"<p class=\"help\">Markadoreak instalatzeko eraman linka zure erreminta "
-"panelera (toolbar), edo eskuineko botoiarekin klik egin eta gehitu erreminta "
-"panelera. Kontuan izan, markadore hauetako batzuk, exekutatzen ari diren "
-"ordenagailua 'barneko' gisa markatua egotea behar dutela (hitzagin zure "
-"sistema kudeatzailearekin zure ordenagailua 'barnekoa' den edo ez "
-"argitzeko)\n"
-".</p>\n"
+"Markadoreak instalatzeko eraman linka zure erreminta panelera (toolbar), edo "
+"eskuineko botoiarekin klik egin eta gehitu erreminta panelera. Orain edozein "
+"markadore aukera dezakezu webguneko edozein orrialdetatik."
 
 msgid "Documentation for this page"
 msgstr "Web orri honen dokumentazioa"
@@ -59,28 +51,6 @@ msgid ""
 "that page."
 msgstr ""
 "Edozein orritik, orria sortzen duen bistaren dokumentaziora eramango zaitu."
-
-msgid "Show object ID"
-msgstr "Objetuaren ID erakutsi"
-
-msgid ""
-"Shows the content-type and unique ID for pages that represent a single "
-"object."
-msgstr ""
-"Objetu bakarra erakusten duten orrietan, eduki mota (content-type) eta "
-"orriaren ID bakarra erakutsi, ."
-
-msgid "Edit this object (current window)"
-msgstr "Objetu hau aldatu ( leiho honetan)"
-
-msgid "Jumps to the admin page for pages that represent a single object."
-msgstr "Objetu bakarra erakusten orrietan, adminiztrazio gunera joan."
-
-msgid "Edit this object (new window)"
-msgstr "Objetu hau aldatu (leiho berrian)"
-
-msgid "As above, but opens the admin page in a new window."
-msgstr "Goian bezala, baina kudeaketa guena leiho berri batean irekiko da."
 
 msgid "Tags"
 msgstr "Etiketak"
@@ -147,6 +117,9 @@ msgstr ""
 msgid "Model: %(name)s"
 msgstr "Modeloa: %(name)s"
 
+msgid "Fields"
+msgstr "Eremuak"
+
 msgid "Field"
 msgstr "Eremua"
 
@@ -156,8 +129,17 @@ msgstr "Mota"
 msgid "Description"
 msgstr "Deskribapena"
 
-msgid "Back to Model Documentation"
-msgstr ""
+msgid "Methods with arguments"
+msgstr "Argumentudun metodoak"
+
+msgid "Method"
+msgstr "Metodoa"
+
+msgid "Arguments"
+msgstr "Argumentuak"
+
+msgid "Back to Model documentation"
+msgstr "Bueltatu Modeloaren Dokumentaziora"
 
 msgid "Model documentation"
 msgstr "Modeloaren dokumentazioa"
@@ -176,9 +158,10 @@ msgstr "Txantiloia: %(name)s"
 msgid "Template: \"%(name)s\""
 msgstr "Txantiloia: \"%(name)s\""
 
+#. Translators: Search is not a verb here, it qualifies path (a search path)
 #, python-format
 msgid "Search path for template \"%(name)s\":"
-msgstr ""
+msgstr "\"%(name)s\" txantiloiaren bilaketa bidea:"
 
 msgid "(does not exist)"
 msgstr "(ez da existitzen)"
@@ -193,7 +176,7 @@ msgid "Template filter documentation"
 msgstr "Txantiloi iragazkien dokumentazioa"
 
 msgid "Built-in filters"
-msgstr ""
+msgstr "Iragazki integratuak"
 
 #, python-format
 msgid ""
@@ -210,7 +193,7 @@ msgid "Template tag documentation"
 msgstr "Template tag documentazioa"
 
 msgid "Built-in tags"
-msgstr ""
+msgstr "Etiketa integratuak"
 
 #, python-format
 msgid ""
@@ -230,24 +213,24 @@ msgstr "Kontextua:"
 msgid "Templates:"
 msgstr "Txantiloia:"
 
-msgid "Back to Views Documentation"
+msgid "Back to View documentation"
 msgstr "Bueltatu Bisten Dokumentaziora"
 
 msgid "View documentation"
 msgstr "Bisten dokumentazioa"
 
 msgid "Jump to namespace"
-msgstr ""
+msgstr "Joan izen-espaziora"
 
 msgid "Empty namespace"
-msgstr ""
+msgstr "Izen-espazio hutsa"
 
 #, python-format
 msgid "Views by namespace %(name)s"
-msgstr ""
+msgstr "Bistak %(name)s izen-espazio arabera"
 
 msgid "Views by empty namespace"
-msgstr ""
+msgstr "Bistak izen-espazio hutsen arabera"
 
 #, python-format
 msgid ""
@@ -255,13 +238,9 @@ msgid ""
 "    View function: <code>%(full_name)s</code>. Name: <code>%(url_name)s</"
 "code>.\n"
 msgstr ""
-
-msgid "Boolean (Either True or False)"
-msgstr "Boolearra (egia ala gezurra)"
-
-#, python-format
-msgid "Field of type: %(field_type)s"
-msgstr "Eremuaren mota: %(field_type)s"
+"\n"
+"    Bista funtzioa: <code>%(full_name)s</code>. Izena: <code>%(url_name)s</"
+"code>.\n"
 
 msgid "tag:"
 msgstr "etiketa:"
@@ -274,7 +253,7 @@ msgstr "bista:"
 
 #, python-format
 msgid "App %(app_label)r not found"
-msgstr ""
+msgstr "%(app_label)r aplikazioa ez da aurkitu"
 
 #, python-format
 msgid "Model %(model_name)r not found in app %(app_label)r"
