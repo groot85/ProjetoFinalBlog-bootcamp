@@ -76,3 +76,5 @@ https://www.linkedin.com/groups/12042170/
 https://docs.djangoproject.com/en/4.2/topics/http/urls/
 https://docs.djangoproject.com/en/3.2/ref/models/fields/#field-types
 https://www.pythonanywhere.com/
+Criar requirements-txt automaticamente
+https://www.dataside.com.br/dataside-community/linguagem-de-programacao/metodos-para-gerar-o-requirements-txt-do-seu-projeto-em-python ou https://dicasdeprogramacao.com.br/como-criar-uma-virtual-env-e-um-arquivo-de-requirementstxt-no-python/
