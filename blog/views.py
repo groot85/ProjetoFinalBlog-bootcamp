@@ -8,7 +8,7 @@ def inicio (request):
     return render(request,'inicio.html')
 
 def post_list (request):
-    return render (request, 'post_list.html', {})
+    return render (request, 'post_list.html',)
 
 #https://docs.djangoproject.com/en/3.2/ref/models/querysets/
 def post_list(request):
