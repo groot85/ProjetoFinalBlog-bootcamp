@@ -5,7 +5,6 @@ from django.shortcuts import get_object_or_404
 
 #publicacao com resumo da postagem (ler mais em: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
 class PostList(generic.ListView):
-    #model = 
     queryset = Post.objects.filter(status=1).order_by('-created_date')
     template_name = 'index.html'
 

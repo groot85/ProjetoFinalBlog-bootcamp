@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ada9z*#2hfgi-2#6-$(3&g_n-7ms5-1ow7hmc0kw@m+8lp&vaq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+DEBUG = True
 #ALLOWED_HOSTS = [] 
 #troquei o [] pelo debaixo para corresponder ao nome de host no PythonAnywhere
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'anaqueiroz.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [str(BASE_DIR.joinpath('templates'))],
+        'DIRS':[str(BASE_DIR.joinpath('templates'))], #[],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

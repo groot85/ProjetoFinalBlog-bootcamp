@@ -8,20 +8,21 @@
 
     <div class=" row">
       
-      {% for post in post_list %}
+        {% for post in PostList %}
 
-          <div class ="col-sm-6">
+            <div class ="col-sm-6">
 
-          <div class="card">
-              <!--<img src="..." class="card-img-top" alt="..."> COLOCAR IMAGEM-->
-              <div class="card-body">
-                <h5 class="card-title">{{ post.title }}</h5>
-                <p class="card-text">{{ post.content|slice:":150" }}</p>
-                <a href="{% url'post_detail' post.slug %}" class="btn btn-primary">Continue lendo</a>
-              </div>
-          </div>
-          </div>
-      {% end for%}
+                <div class="card">
+                <!--<img src="..." class="card-img-top" alt="..."> COLOCAR IMAGEM-->
+                    <div class="card-body">
+                     <h5 class="card-title">{{ post.title }}</h5>
+                     <p class="card-text">{{ post.content | slice:":150"}}</p>
+                    <a href="{% url 'post_detail' post.slug %}" class="btn btn-primary">Continue lendo</a>
+                    </div>
+                </div>
+            </div>  
+
+        {% endfor %}
     </div>
 
 </main>
