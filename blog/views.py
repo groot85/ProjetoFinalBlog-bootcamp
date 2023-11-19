@@ -1,23 +1,22 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.utils import timezone
 from .models import Post
 from django.views import generic
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404
 
 #publicacao com resumo da postagem (ler mais em: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
 class PostList(generic.ListView):
+    #model = 
     queryset = Post.objects.filter(status=1).order_by('-created_date')
     template_name = 'index.html'
 
 #publicacao com toda postagem (ler mais em: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
 class DetailView (generic.DetailView):
     model = Post
-    template_name = "post_detail.html"
+    template_name = 'post_detail.html'
 
-def post_detail(request, slug):
-    post = get_object_or_404(Post, slug=slug)
-    return render(request, 'blog/post_detail.html', {'post': post})
+    def post_detail(request, slug):
+        post = get_object_or_404(Post, slug=slug)
+        return render(request, 'blog/post_detail.html', context={'post': post})
 
 
 """

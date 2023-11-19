@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> Blog analauraqueiroz Bootcamp</title>
-    </head>
-    <body>
-        <header>
-            <h1>
-                <a href="/">analauraqueirozNANA</a>
-            </h1>
-        </header>
-        {% for post in posts %}
-            <article>
-                <time>published: {{ post.published_date }}</time>
-                 <h2><a href="">{{ post.title }}</a></h2>
-                <p>{{ post.text|linebreaksbr }}</p>
-            </article>
-        {% endfor %}
-    </body>
-</html>
+{% extends 'base.html' %} 
+
+{% block content %} 
+
+<h1>Publicações completas</h1>
+
+<main class="container py-5">
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{% block title %} {{ object.title }}  {% endblock title %}</h5>
+                    <p class="card-text">{{ object.content | safe }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}  
