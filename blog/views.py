@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Post
 from django.views.generic import ListView
 from django.views import generic
+from django.db.models import Q
 
 #publicacao com resumo da postagem (ler mais em: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
 class PostList(generic.ListView):
@@ -13,17 +14,14 @@ class DetailView (generic.DetailView):
     model = Post
     template_name = 'post_detail.html'
 
-def post_list():
-    return render ('','post_detail.html')
+def search(request):
+  context = {}
+  query = ""
+  if request.GET:
+    query = request.GET.get('q', '')
+    context['query'] = str(query)
+    posts = Post.objects.filter(Q(titulo__icontains=query) | Q(conteudo__icontains=query)).distinct()
+    context['posts'] = posts
+  return render(request, 'search.html', context)
 
-"""#https://docs.djangoproject.com/en/3.2/ref/models/querysets/
-def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/post_list.html', {'posts': posts})
-    
-# A view is a place where we put the "logic" of our application
-def inicio (request):
-    return render(request,'index.html')
-    
-    
-    """
+
