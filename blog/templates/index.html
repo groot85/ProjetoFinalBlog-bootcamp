@@ -1,5 +1,5 @@
 {% extends 'base.html' %} 
-
+{% load static %}
 {% block content %} 
 
     <main class = "container py-5">
@@ -11,9 +11,11 @@
             <div class ="col-sm-6">
 
             <div class="card">
-                <!--<img src="..." class="card-img-top" alt="..."> COLOCAR IMAGEM-->
                 <div class="card-body">
                 <h5 class="card-title">{{ post.title }}</h5>
+                <small> Escrito por:
+                    {{ post.author.username|title }} - Publicado em: {{ post.created_date|date:"M d, Y" }}
+                </small>
                 <p class="card-text">{{ post.content | slice:":150"}}</p>
                 <a href="{% url 'post_detail' post.slug %}" class="btn btn-primary">Continue lendo</a>
                 </div>

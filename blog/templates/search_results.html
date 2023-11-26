@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Resultados da sua pesquisa!</h1>
+
+<ul>
+  {% for post in SearchResultsView %}
+    <li>
+      {{ post.title }} , {{ post.content }}
+    </li>
+  {% endfor %}
+</ul> 
+
+
+
+{% endblock %}

@@ -13,13 +13,19 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+
+https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/skeleton_website
 """
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path
+from django.conf.urls import include
+from django.views.generic import RedirectView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path ('', include ('blog.urls')),
-    
-    
-]
+    path ('blog/', include ('blog.urls')),
+    path('', RedirectView.as_view(url='/blog/')),
+ 
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

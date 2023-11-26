@@ -16,6 +16,9 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0) #padrao do post é rascunho
     published_date = models.DateTimeField(blank=True, null=True)
 
+    class Meta:
+        ordering = ['-created_date'] 
+
 def publish(self):
         self.published_date = timezone.now()
         self.save()
@@ -23,5 +26,4 @@ def publish(self):
 def __str__(self):
     return self.title
         
-class Meta:
-    ordering = ['-created_date'] 
+    

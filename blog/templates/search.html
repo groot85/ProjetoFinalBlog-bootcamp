@@ -1,33 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<main class="container py-5">
-  <h1>Resultados da pesquisa</h1>
-  {% if query %}
-  <p>Você pesquisou por: {{ query }}</p>
-  {% endif %}
-  {% if posts %}
-  <div class="row">
-      <div class="col-sm-6">
-      <div class="card">
-          <div class="card-body">
-            <ul>
-              {% for post in posts %}
-              <li><a href="{% url 'post_detail' post.slug %}">{{ <title>programar</title> | safe }}</a></li>
-              {% endfor %}
-            </ul>
-            {% else %}
-            <p>Nenhum post encontrado.</p>
-            {% endif %}
-          </div>
-      </div>
-      </div>
-  </div>
-
-  </main>
-
-  
-  
-
+<h1>Resultados da pesquisa</h1>
+{% if query %}
+<p>Você pesquisou por: {{ query }}</p>
+{% endif %}
+{% if posts %}
+<ul>
+  {% for post in posts %}
+  <li><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>Nenhum post encontrado.</p>
+{% endif %}
 {% endblock content %}

@@ -1,5 +1,5 @@
 {% extends 'base.html' %} 
-
+{% load static %}
 {% block content %} 
 
     <main class="container py-5">
@@ -9,6 +9,9 @@
         <div class="card">
             <div class="card-body">
             <h5 class="card-title"> {% block title %} {{ object.title }} {% endblock title %}</h5>
+            <small> Escrito por:
+                {{ post.author.username|title }} - Publicado em: {{ post.created_date|date:"M d, Y" }}
+            </small>
             <p class="card-text"> {{ object.content | safe }}</p>
             </div>
         </div>
