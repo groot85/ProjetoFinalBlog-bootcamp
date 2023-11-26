@@ -6,6 +6,8 @@ from django.views.generic import ListView
 from django.views.generic import DetailView
 from django.db.models import Q
 from django.views import generic
+from django.views.decorators.http import require_GET
+
   
 
 #publicacao com resumo da postagem (ler mais em: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
@@ -18,6 +20,16 @@ class DetailView (generic.DetailView):
     queryset = Post.objects.all().order_by("-created_date")
     template_name = 'post_detail.html'
 
+@require_GET
+def search(request):
+  context = {}
+  query = request.GET.get('q', '')
+  context['query'] = str(query)
+  posts = Post.objects.filter(Q(title__icontains=query) | Q(content__icontains=query)).distinct()
+  context['posts'] = posts
+  return render(request, 'search.html', context)
+
+"""
 def search(request):
   context = {}
   query = ""
@@ -28,8 +40,6 @@ def search(request):
     context['posts'] = posts
   return render(request, 'search', context)
 
-
-"""
 class SearchResultsView(generic.DetailView):
     model = Post
     template_name = 'search_results.html'
