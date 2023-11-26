@@ -5,7 +5,8 @@ from .models import Post
 from django.views.generic import ListView
 from django.views.generic import DetailView
 from django.db.models import Q
-from django.views import generic    
+from django.views import generic
+  
 
 #publicacao com resumo da postagem (ler mais em: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
 class PostList(generic.ListView):
@@ -14,7 +15,7 @@ class PostList(generic.ListView):
 
 #publicacao com toda posta  gem (ler mais em: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
 class DetailView (generic.DetailView):
-    model = Post
+    queryset = Post.objects.all().order_by("-created_date")
     template_name = 'post_detail.html'
 
 def search(request):

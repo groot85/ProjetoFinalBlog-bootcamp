@@ -5,9 +5,8 @@ from . import views
 #home, por isso ''
 urlpatterns = [
     path('', views.PostList.as_view(), name = 'home'),
-    path('<slug:slug>/', views.DetailView.as_view(), name='post_detail'),
-    #path('search/', views.SearchResultsView.as_view(), name= 'search_results')
-    path('search_results/', views.search, name='search'),
- 
+    path('post/<slug:slug>/', views.DetailView.as_view(), name='post_detail'),
+    #path('search_results/', views.SearchResultsView.as_view(), name= 'search_results')
+    path('search/', views.search, name='search')
    
 ]   
